@@ -1,0 +1,14 @@
+{
+    "playerWhitelist": [
+        "76561199081029968"
+    ],
+    "usingWhitelist": false,
+    "playerBlacklist": [],
+    "usingBlacklist": true,
+    "ppThreshold": 550,
+    "channelTargets": [
+        "979213142670323782",
+        "1225249630334484551"
+    ],
+    "topTenRequired": true
+}

@@ -1,0 +1,16 @@
+{
+  "name": "fishnationbot",
+  "version": "1.0.0",
+  "description": "Top 10 leaderboards for fish nation server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "WhatisaRyker",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "ws": "^8.16.0"
+  }
+}
