@@ -13,12 +13,12 @@ module.exports = {
         if(!ctx.member.permissionsIn(ctx.channel).has(PermissionsBitField.Flags.Administrator)) {
             return
         }
-        
+
         const channelID = ctx.options.getString('channel-id')
 
         try {
             const resp = ScoreHandling.AddChannelTarget(channelID);
-            
+
             if(resp) {
                 let embed = new EmbedBuilder()
                     .addFields({name:'Added Channel', value:'The channel was now added to the targets'});

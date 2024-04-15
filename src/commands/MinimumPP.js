@@ -13,7 +13,7 @@ module.exports = {
         if(!ctx.member.permissionsIn(ctx.channel).has(PermissionsBitField.Flags.Administrator)) {
             return
         }
-        
+
         const pp = ctx.options.getString('min-pp')
 
         try {

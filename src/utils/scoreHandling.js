@@ -73,7 +73,7 @@ class ScoreHand {
                 )
 
             console.log(`${playerName} scored on ${songName} | #${rank} / ${acc}% / ${pp}pp`)
-    
+
             this.channelTargets.forEach( (channelID) => {
                 let channel = client.channels.cache.get(channelID)
                 if(this.maxVerstappen.includes(playerID)) {
@@ -157,27 +157,27 @@ class ScoreHand {
     GetplayerWhitelist () {
         return this.playerWhitelist
     }
-    
+
     GetusingWhitelist () {
         return this.usingWhitelist
     }
-    
+
     GetplayerBlacklist () {
         return this.playerBlacklist
     }
-    
+
     GetusingBlacklist () {
         return this.usingBlacklist
     }
-    
+
     GetppThreshold () {
         return this.ppThreshold
     }
-    
+
     GetchannelTargets () {
         return this.channelTargets
     }
-    
+
     SetplayerWhitelist (value) {
         this.playerWhitelist = value
     }
@@ -199,7 +199,7 @@ class ScoreHand {
     SetTopTenRequired (value) {
         this.topTenRequired = value
     }
-    
+
 }
 
 const ScoreHandling = new ScoreHand()

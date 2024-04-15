@@ -3,10 +3,10 @@ require('dotenv').config()
 const { ScoreHandling } = require('./utils/scoreHandling.js')
 const { ReadVariables, SaveVariables } = require('./utils/variableSaving.js')
 const WebSocket = require('ws');
-const fs = require('fs');   
+const fs = require('fs');
 const path = require('path');
 const token = process.env.FISHBOTCLIENT_TOKEN
-const client = new Client({ intents: [ 
+const client = new Client({ intents: [
     GatewayIntentBits.Guilds,
 ]});
 
@@ -19,20 +19,20 @@ async function Connect() {
                 console.log('Connected to score service');
                 return;
             }
-    
+
             newData = JSON.parse(data)
             //newData = JSON.stringify(newData)
-    
+
             if(newData["commandName"] != 'score') {
                 return
             }
-    
+
             ScoreHandling.HandleScore(client, newData)
         } catch(error) {
             console.log(error)
         }
     })
-    
+
     Scores.on('close', async () => {
         try {
             console.log("Websocket was closed")
@@ -44,11 +44,11 @@ async function Connect() {
             console.log(error)
         }
     })
-    
+
     Scores.on('error', async (data) => {
         try {
             newData = JSON.parse(data)
-    
+
             console.log(data)
 
             Scores.close()
@@ -98,7 +98,7 @@ client.on('ready', () =>{
                 Routes.applicationCommands(client.user.id),
                 { body: commands },
             );
-        
+
             console.log(`Successfully reloaded ${data.length} application (/) commands`);
 
         } catch (error) {

@@ -13,7 +13,7 @@ module.exports = {
         if(!ctx.member.permissionsIn(ctx.channel).has(PermissionsBitField.Flags.Administrator)) {
             return
         }
-        
+
         const act = ctx.options.getString('topten-req')
 
         try {

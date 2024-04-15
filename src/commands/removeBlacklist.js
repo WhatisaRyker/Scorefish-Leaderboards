@@ -13,12 +13,12 @@ module.exports = {
         if(!ctx.member.permissionsIn(ctx.channel).has(PermissionsBitField.Flags.Administrator)) {
             return
         }
-        
+
         const ssID = ctx.options.getString('scoresaber-id')
 
         try {
             const resp = ScoreHandling.RemoveBlacklist(ssID);
-            
+
             if(resp) {
                 let embed = new EmbedBuilder()
                     .addFields({name:'Added Player', value:'The player was now removed from the blacklist'});

@@ -13,12 +13,12 @@ module.exports = {
         if(!ctx.member.permissionsIn(ctx.channel).has(PermissionsBitField.Flags.Administrator)) {
             return
         }
-        
+
         const channelID = ctx.options.getString('channel-id')
 
         try {
             const resp = ScoreHandling.RemoveChannelTarget(channelID);
-            
+
             if(resp) {
                 let embed = new EmbedBuilder()
                     .addFields({name:'Removed Channel', value:'The channel was removed from the targets'});
