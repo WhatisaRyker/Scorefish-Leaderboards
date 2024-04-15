@@ -1,7 +1,7 @@
 # Scorefish-Leaderboards
-    The Scorefish leaderboard bot allowes for score posting to any specific channel requested by the user. 
+The Scorefish leaderboard bot allowes for score posting to any specific channel requested by the user. 
 
-    The user is also able to define specific thresholds that a score needs to meet in order to be posted.
+The user is also able to define specific thresholds that a score needs to meet in order to be posted.
 
 
 ## How to run Scorefish
